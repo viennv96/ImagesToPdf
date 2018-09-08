@@ -207,6 +207,7 @@ namespace ImagesToPdf
             ouput.Save(string.Format("{0}\\{1}", outputFolderPath, outputFileName));
             ouput.Close();
             ouput.Dispose();
+            GC.Collect();
         }
     }
 }
