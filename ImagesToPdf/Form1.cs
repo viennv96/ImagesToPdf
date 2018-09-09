@@ -77,7 +77,10 @@ namespace ImagesToPdf
             string[] items = (string[])e.Data.GetData(DataFormats.FileDrop);
             foreach (string item in items)
             {
-                AddDataToTable(item);
+                if (Directory.Exists(item))
+                {
+                    AddDataToTable(item);
+                }
             }
         }
 
